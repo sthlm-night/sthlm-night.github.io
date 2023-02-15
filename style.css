@@ -1,16 +1,17 @@
 /* Set height to 100% for body and html to enable the background image to cover the whole page: */
 body, html {
   height: 100%;
-  background-image: url("bg1.jpg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
   background-color: black;
 }
 
 .bgimg {
   /* Full-screen */
   height: 100%;
+  /*opacity: 0.5; */
+  background-image: url("bg1.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
   /* Center the background image */
   /*background-position: center;
   /* Scale and zoom in the image */
