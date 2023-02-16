@@ -1,245 +1,72 @@
+/* Set height to 100% for body and html to enable the background image to cover the whole page: */
 body, html {
-	margin: 0;
-	height: 100%;
-	background-color: #000000;
-}
-.background {
-	height: 100%;
-	background-image: url("bg1.jpg");
-	background-color: #000000;
-	/*opacity: 0.8;*/
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	background-attachment: fixed;
-	resize: both;
-}
-.pbackground {
-	height: max-content;
-	background-image: url("bg1.jpg");
-	background-color: #000000;
-	/*opacity: 0.8;*/
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	background-attachment: fixed;
-	resize: both;
+  height: 100%;
+  background-color: black;
 }
 
-/* Text definitions */
-.noticetext {
-	color: #FFFFFF;
-	font-family: "Sans-serif", Verdana;
-	font-size: 25px
-}	
-.headingtext {
-	color: #FFFFFF;
-	font-family: "Sans-serif", Verdana;
-	font-size: 18px;
-}
-.buttontext {
-	color: #FFFFFF;
-	font-family: "Sans-serif", Verdana;
-	font-size: 15px;
-}
-.bodytext {
-  color: #FFFFFF;
+.bgimg {
+  /* Full-screen */
+  height: 100%;
+  /*opacity: 0.5; */
+  background-image: url("bg1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  /* Center the background image */
+  /*background-position: center;
+  /* Scale and zoom in the image */
+  /*background-size: cover;
+  /* Add position: relative to enable absolutely positioned elements inside the image (place text) */
+  position: relative;
+  /* Add a white text color to all elements inside the .bgimg container */
+  color: White;
+  /* Add a font */
   font-family: "Sans-serif", Verdana;
-  font-size: 10px;
-}	
+  /* Set the font-size to 25 pixels */
+  font-size: 25px;
+}
+
+/* Position text in the top-left corner */
+.topleft {
+  position: absolute;
+  top: 0;
+  left: 16px;
+}
+
+/* Position text in the bottom-left corner */
+.bottomleft {
+  position: absolute;
+  bottom: 0;
+  left: 16px;
+}
+
+/* Position text in the middle */
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Style the <hr> element */
 hr {
   margin: auto;
   width: 40%;
 }
-
-/* Class positions */
-.topcenter {
-	position: absolute;
-	top: 10%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-    text-align: center;
-}
-.middlecenter {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	text-align: center;
-}
-.middlestatic {
-	position: static;
-	top: 50%;
-	left: 50%;
-	text-align: center;
-}
-.bottomcenter {
-	position: static;
-	bottom: 5%;
-	left: 50%;
-	text-align: center;
-}
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-
-/* Floating elements */
-.topfloating {
-	position: fixed;
-	top: 5%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-    text-align: center;
-}
-.bottomfloating {
-	position: fixed;
-	bottom: 0;
-	left: 50%;
-	transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-/* Link properties */
 a:link {
-  color: #FFFFFF;
+  color: white;
   text-decoration: none;
 }
 a:visited {
-  color: #FFFFFF;
+  color: white;
   text-decoration: none;
 }
 a:hover {
-  color: #C0C0C0;
+  color: grey;
   text-decoration: none;
 }
 a:active {
-  color: #C0C0C0;
+  color: grey;
   text-decoration: none;
-}
-
-/* Glide */
-.glide {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	text-align: center;
-	width: 100%;
-	box-sizing: border-box;
-}
-.glide * {
-	box-sizing: inherit;
-}
-.glide__track {
-	overflow: hidden;
-}
-.glide__slides {
-	position: relative;
-	width: 100%;
-	list-style: none;
-	backface-visibility: hidden;
-	transform-style: preserve-3d;
-	touch-action: pan-Y;
-	overflow: hidden;
-	margin: 0;
-	padding: 0;
-	white-space: nowrap;
-	display: flex;
-	flex-wrap: nowrap;
-	will-change: transform;
-}
-.glide__slides--dragging {
-	user-select: none;
-}
-.glide__slide {
-	width: 100%;
-	height: 100%;
-	flex-shrink: 0;
-	white-space: normal;
-	user-select: none;
-	-webkit-touch-callout: none;
-	-webkit-tap-highlight-color: transparent;
-}
-.glide__slide a {
-	user-select: none;
-	-webkit-user-drag: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-}
-.glide__arrows {
-	-webkit-touch-callout: none;
-	user-select: none;
-}
-.glide__bullets {
-	-webkit-touch-callout: none;
-	user-select: none;
-}
-.glide--rtl {
-	direction: rtl;
-}
-.glide__bullet {
-	background-color: rgba(255, 255, 255, 0.5);
-	width: 9px;
-	height: 9px;
-	padding: 0;
-	border-radius: 50%;
-	border: 2px solid transparent;
-	transition: all 300ms ease-in-out;
-	cursor: pointer;
-	line-height: 0;
-	box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.1);
-	margin: 0 0.25em;
-}
-
-/* Gallery */
-* {
-  box-sizing: border-box;
-}
-.main {
-  max-width: 1000px;
-  margin: auto;
-}
-.row {
-  margin: 0;
-}
-
-/* Add padding BETWEEN each column (if you want) */
-.row,
-.row > .column {
-  padding: 4px;
-}
-
-/* Create four equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 50%;
-}
-
-/* Clear floats after rows */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Content */
-.content {
-  padding: 1px;
-}
-
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 900px) {
-  .column {
-    width: 50%;
-  }
-}
-
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-  }
 }
