@@ -1,72 +1,230 @@
-/* Set height to 100% for body and html to enable the background image to cover the whole page: */
-body, html {
-  height: 100%;
-  background-color: black;
+body {
+	margin: 0;
+	height: 100%;
+	background-color: #000000;
+	background-image: url("bg1.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+html {
+	margin: 0;
 }
 
-.bgimg {
-  /* Full-screen */
-  height: 100%;
-  /*opacity: 0.5; */
-  background-image: url("bg1.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  /* Center the background image */
-  /*background-position: center;
-  /* Scale and zoom in the image */
-  /*background-size: cover;
-  /* Add position: relative to enable absolutely positioned elements inside the image (place text) */
-  position: relative;
-  /* Add a white text color to all elements inside the .bgimg container */
-  color: White;
-  /* Add a font */
+/* Text definitions */
+.noticetext {
+	color: #FFFFFF;
+	font-family: "Sans-serif", Verdana;
+	font-size: 25px
+}	
+.headingtext {
+	color: #FFFFFF;
+	font-family: "Sans-serif", Verdana;
+	font-size: 18px;
+}
+.buttontext {
+	color: #FFFFFF;
+	font-family: "Sans-serif", Verdana;
+	font-size: 18px;
+}
+.bodytext {
+  color: #FFFFFF;
   font-family: "Sans-serif", Verdana;
-  /* Set the font-size to 25 pixels */
-  font-size: 25px;
-}
-
-/* Position text in the top-left corner */
-.topleft {
-  position: absolute;
-  top: 0;
-  left: 16px;
-}
-
-/* Position text in the bottom-left corner */
-.bottomleft {
-  position: absolute;
-  bottom: 0;
-  left: 16px;
-}
-
-/* Position text in the middle */
-.middle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-/* Style the <hr> element */
+  font-size: 10px;
+}	
 hr {
   margin: auto;
-  width: 40%;
+  width: 80%;
+  opacity: 0.5
 }
+
+.box {
+  background-color: #000000;
+  padding: 10px;
+  opacity: 0.5;
+}
+
+/* Class positions */
+.topcenter {
+	position: absolute;
+	top: 6%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+    text-align: center;
+}
+.middlecenter {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+.middlestatic {
+	position: static;
+	top: 50%;
+	left: 50%;
+	text-align: center;
+}
+.bottomcenter {
+	position: static;
+	bottom: 5%;
+	left: 50%;
+	text-align: center;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.centertext {
+	text-align: center;
+}
+
+/* Floating elements */
+.topfloating {
+	position: fixed;
+	top: 2%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+    text-align: center;
+	z-index: 999;
+}
+.bottomfloating {
+	position: fixed;
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%, -50%);
+    text-align: center;
+	z-index: 999;
+}
+.pbottomfloating {
+	position: fixed;
+	bottom: 0;
+    text-align: center;
+	z-index: 999;
+}
+
+.left {
+	transform: translate (-50%);
+}
+
+/* Link properties */
 a:link {
-  color: white;
+  color: #FFFFFF;
   text-decoration: none;
 }
 a:visited {
-  color: white;
+  color: #FFFFFF;
   text-decoration: none;
 }
 a:hover {
-  color: grey;
+  color: #C0C0C0;
   text-decoration: none;
 }
 a:active {
-  color: grey;
+  color: #C0C0C0;
   text-decoration: none;
+}
+
+/* Responsive image gallery rules begin*/
+
+.image-gallery {
+  /* Mobile first */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 10px;
+}
+
+.image-gallery .column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.image-item img {
+  width: 100%;
+  border-radius: 2px;
+  height: 100%;
+  object-fit: cover;
+}
+.image-item-g img {
+  width: 100%;
+  border-radius: 2px;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* overlay styles */
+
+.image-item {
+  position: relative;
+  cursor: pointer;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(57, 57, 57, 0.502);
+  top: 0;
+  left: 0;
+  /*transform: scale(0);
+  /*transition: all 0.2s 0.1s ease-in-out;*/
+  color: #fff;
+  /* center overlay content */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* hover */
+.image-item:hover .overlay {
+  transform: scale(1);
+}
+
+@media only screen and (max-width: 460px) {
+.buttontext {
+	font-size: 14px;
+}
+}
+@media only screen and (max-width: 350px) {
+.buttontext {
+	font-size: 13px;
+}
+}
+@media only screen and (max-width: 330px) {
+.buttontext {
+	font-size: 12px;
+}
+}
+@media only screen and (min-width: 960px) {
+.image-gallery {
+    flex-direction: row;
+  }
+.deskcenter {
+	top: 30%;
+	position: absolute;
+}
+.overlay {
+  width: 90%;
+  height: 90%;
+  top: 4.5%;
+  left: 4.5%;
+  /*transform: translate(5%, 5%);*/
+  transform: scale(0);
+  transition: all 0.2s 0.1s ease-in-out;
+}
+.image-item img {
+  width: 90%;
+  height: 90%;
+  transform: translate(5%, 5%);
+}
+.image-item-g img {
+  width: 100%;
+  height: 100%;
+/*  transform: translate(5%, 5%);*/
+}
 }
