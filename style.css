@@ -2,7 +2,7 @@ body {
 	margin: 0;
 	height: 100%;
 	background-color: #000000;
-	background-image: url("bg1.jpg");
+	/*background-image: url("bg1.jpg");*/
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -25,12 +25,17 @@ html {
 }
 .buttontext {
 	color: #FFFFFF;
-	font-family: "Sans-serif", Verdana;
+	font-family: "Montserrat", sans-serif;
+	font-size: 18px;
+}
+.sbuttontext {
+	color: #DEDEDE;
+	font-family: "Montserrat", sans-serif;
 	font-size: 18px;
 }
 .bodytext {
   color: #FFFFFF;
-  font-family: "Sans-serif", Verdana;
+  font-family: "Montserrat", sans-serif;
   font-size: 18px;
 }	
 hr {
@@ -53,7 +58,7 @@ hr {
 }
 .middlecenter {
 	position: absolute;
-	top: 50%;
+	top: 20%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	text-align: center;
@@ -176,8 +181,6 @@ a:active {
   background: rgba(0, 0, 0, 0.3);
   top: 0;
   left: 0;
-  /*transform: scale(0);
-  /*transition: all 0.2s 0.1s ease-in-out;*/
   color: #fff;
   /* center overlay content */
   display: flex;
@@ -186,12 +189,10 @@ a:active {
 }
 .boverlay {
   background: rgba(0, 0, 0, 0.8);
-  width: 270px;
-  /*transform: scale(0);
-  /*transition: all 0.2s 0.1s ease-in-out;*/
+  width: 210px;
   color: #fff;
-  /* center overlay content */
   align-items: center;
+  padding: 8px;
 }
 
 /* hover */
@@ -199,22 +200,41 @@ a:active {
   transform: scale(1);
 }
 
+/* This is messy */
+@media only screen and (min-width: 460px) {
+.boverlay {
+  width: 240px;
+}
+}
 @media only screen and (max-width: 460px) {
 .buttontext {
 	font-size: 14px;
+}
+.boverlay {
+  width: 190px;
 }
 }
 @media only screen and (max-width: 350px) {
 .buttontext {
 	font-size: 13px;
 }
+.boverlay {
+  width: 170px;
+}
 }
 @media only screen and (max-width: 330px) {
 .buttontext {
 	font-size: 12px;
 }
+.boverlay {
+  width: 150px;
+}
 }
 @media only screen and (min-width: 960px) {
+
+.boverlay {
+  width: 240px;
+}
 .image-gallery {
     flex-direction: row;
   }
