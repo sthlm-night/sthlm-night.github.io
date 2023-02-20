@@ -26,7 +26,7 @@ html {
 .buttontext {
 	color: #FFFFFF;
 	font-family: "Montserrat", sans-serif;
-	font-size: 16px;
+	font-size: 19px;
 }
 .sbuttontext {
 	color: #DEDEDE;
@@ -43,6 +43,7 @@ hr {
   width: 80%;
   opacity: 0.5
 }
+.nobr { white-space: nowrap }
 
 .box {
   background-color: #000000;
@@ -86,6 +87,30 @@ hr {
 }
 
 /* Floating elements */
+.topleft {
+	position: fixed;
+	top: 2%;
+	left: 10%;
+	transform: translate(-50%, -50%);
+    text-align: center;
+	z-index: 999;
+}
+.topmiddle {
+	position: fixed;
+	top: 2%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+    text-align: center;
+	z-index: 999;
+}
+.topright {
+	position: fixed;
+	top: 2%;
+	left: 90%;
+	transform: translate(-50%, -50%);
+    text-align: center;
+	z-index: 999;
+}	
 .topfloating {
 	position: fixed;
 	top: 2%;
@@ -111,6 +136,18 @@ hr {
 
 .left {
 	transform: translate (-50%);
+}
+
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 4%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
 }
 
 /* Link properties */
@@ -189,10 +226,9 @@ a:active {
 }
 .boverlay {
   background: rgba(0, 0, 0, 0.8);
-  width: 210px;
   color: #fff;
   align-items: center;
-  padding: 8px;
+  min-width: 100%;
 }
 
 /* hover */
@@ -201,39 +237,20 @@ a:active {
 }
 
 /* This is messy */
-@media only screen and (min-width: 460px) {
-.boverlay {
-  width: 240px;
-}
-}
 @media only screen and (max-width: 460px) {
 .buttontext {
-	font-size: 14px;
-}
-.boverlay {
-  width: 190px;
+	font-size: 16px;
 }
 }
-@media only screen and (max-width: 350px) {
+@media only screen and (max-width: 360px) {
 .buttontext {
-	font-size: 13px;
-}
-.boverlay {
-  width: 170px;
-}
-}
-@media only screen and (max-width: 330px) {
-.buttontext {
-	font-size: 12px;
-}
-.boverlay {
-  width: 150px;
+	font-size: 15px;
 }
 }
 @media only screen and (min-width: 960px) {
 
-.boverlay {
-  width: 240px;
+.buttontext {
+	font-size: 22px;
 }
 .image-gallery {
     flex-direction: row;
