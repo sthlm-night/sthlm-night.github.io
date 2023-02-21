@@ -2,7 +2,7 @@ body {
 	margin: 0;
 	height: 100%;
 	background-color: #000000;
-	background-image: url("bg1.jpg");
+	/*background-image: url("bg1.jpg");*/
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -13,77 +13,18 @@ html {
 }
 
 /* Text definitions */
-.noticetext {
-	color: #FFFFFF;
-	font-family: "Sans-serif", Verdana;
-	font-size: 18px
-}	
-.headingtext {
-	color: #FFFFFF;
-	font-family: "Sans-serif", Verdana;
-	font-size: 18px;
-}
 .buttontext {
 	color: #FFFFFF;
 	font-family: "Montserrat", sans-serif;
 	font-size: 19px;
 }
-.sbuttontext {
-	color: #DEDEDE;
-	font-family: "Montserrat", sans-serif;
-	font-size: 18px;
-}
 .bodytext {
-  color: #FFFFFF;
-  font-family: "Montserrat", sans-serif;
-  font-size: 18px;
+	color: #FFFFFF;
+	font-family: "Montserrat", sans-serif;
+	font-size: 12px;
 }	
-hr {
-  margin: auto;
-  width: 80%;
-  opacity: 0.5
-}
-.nobr { white-space: nowrap }
-
-.box {
-  background-color: #000000;
-  padding: 10px;
-  opacity: 0.5;
-}
-
-/* Class positions */
-.topcenter {
-	position: static;
-	top: 6%;
-    text-align: center;
-}
-.middlecenter {
-	position: absolute;
-	top: 20%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	text-align: center;
-}
-.middlestatic {
-	position: static;
-	top: 50%;
-	left: 50%;
-	text-align: center;
-}
-.bottomcenter {
-	position: static;
-	bottom: 5%;
-	left: 50%;
-	text-align: center;
-}
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-.centertext {
-	text-align: center;
+.nobr { 
+	white-space: nowrap 
 }
 
 /* Floating elements */
@@ -111,129 +52,96 @@ hr {
     text-align: center;
 	z-index: 999;
 }	
-.topfloating {
-	position: fixed;
-	top: 2%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-    text-align: center;
-	z-index: 999;
-}
-.bottomfloating {
-	position: fixed;
-	bottom: 0;
-	left: 50%;
-	transform: translate(-50%, -50%);
-    text-align: center;
-	z-index: 999;
-}
-.pbottomfloating {
-	position: fixed;
-	bottom: 0;
-    text-align: center;
-	z-index: 999;
-}
-
-.left {
-	transform: translate (-50%);
-}
 
 #overlay {
-  position: fixed; /* Sit on top of the page content */
-  width: 100%; /* Full width (cover the whole page) */
-  height: 34px; /* Full height (cover the whole page) */
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
-  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+	position: fixed;
+	width: 100%;
+	height: 34px;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.5);
+	z-index: 2;
 }
 
 /* Link properties */
 a:link {
-  color: #FFFFFF;
-  text-decoration: none;
+	color: #FFFFFF;
+	text-decoration: none;
 }
 a:visited {
-  color: #FFFFFF;
-  text-decoration: none;
+	color: #FFFFFF;
+	text-decoration: none;
 }
 a:hover {
-  color: #C0C0C0;
-  text-decoration: none;
+	color: #C0C0C0;
+	text-decoration: none;
 }
 a:active {
-  color: #C0C0C0;
-  text-decoration: none;
+	color: #C0C0C0;
+	text-decoration: none;
 }
 
 /* Responsive image gallery rules begin*/
 
 .image-gallery {
   /* Mobile first */
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  padding: 10px;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	padding: 10px;
 }
 
 .image-gallery .column {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
 }
 
 .image-item img {
-  width: 100%;
-  border-radius: 2px;
-  height: 100%;
-  object-fit: cover;
+	width: 100%;
+	border-radius: 2px;
+	height: 100%;
+	object-fit: cover;
 }
 .image-item-g img {
-  width: 100%;
-  border-radius: 2px;
-  height: 100%;
-  object-fit: cover;
+	width: 100%;
+	border-radius: 2px;
+	height: 100%;
+	object-fit: cover;
 }
 .image-item-p img {
-  width: 30%;
-  border-radius: 2px;
-  height: 100%;
-  opacity: 0.8;
-  object-fit: cover;
+	width: 30%;
+	border-radius: 2px;
+	height: 100%;
+	opacity: 0.8;
+	object-fit: cover;
 }
 
 /* overlay styles */
 
 .image-item {
-  position: relative;
-  cursor: pointer;
+	position: relative;
+	cursor: pointer;
 }
 
 .overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.3);
-  top: 0;
-  left: 0;
-  color: #fff;
-  /* center overlay content */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.boverlay {
-  background: rgba(0, 0, 0, 0.8);
-  color: #fff;
-  align-items: center;
-  min-width: 100%;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.3);
+	top: 0;
+	left: 0;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 /* hover */
 .image-item:hover .overlay {
-  transform: scale(1);
+	transform: scale(1);
 }
 
 @media only screen and (min-width: 960px) {
@@ -246,42 +154,52 @@ a:active {
 	position: absolute;
 }
 .overlay {
-  width: 90%;
-  height: 90%;
-  top: 4.5%;
-  left: 4.5%;
-  /*transform: translate(5%, 5%);*/
-  transform: scale(0);
-  transition: all 0.2s 0.1s ease-in-out;
+	width: 90%;
+	height: 90%;
+	top: 4.5%;
+	left: 4.5%;
+	transform: scale(0);
+	transition: all 0.2s 0.1s ease-in-out;
 }
 .image-item img {
-  width: 90%;
-  height: 90%;
-  transform: translate(5%, 5%);
+	width: 90%;
+	height: 90%;
+	transform: translate(5%, 5%);
 }
 .image-item-g img {
-  width: 100%;
-  height: 100%;
-/*  transform: translate(5%, 5%);*/
+	width: 100%;
+	height: 100%;
 }
 }
 @media only screen and (max-width: 460px) {
 .buttontext {
 	font-size: 16px;
 }	
+.bodytext {
+	font-size: 11px;
+}
 }
 @media only screen and (max-width: 360px) {
 .buttontext {
 	font-size: 15px;
 }
+.bodytext {
+	font-size: 10px;
+}
 }
 @media only screen and (max-height: 460px) {
 .buttontext {
 	font-size: 16px;
+}
+.bodytext {
+	font-size: 11px;
 }	
 }
 @media only screen and (max-height: 360px) {
 .buttontext {
 	font-size: 15px;
+}
+.bodytext {
+	font-size: 10px;
 }
 }
