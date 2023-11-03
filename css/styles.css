@@ -3845,8 +3845,6 @@ textarea.form-control-lg {
   color: var(--bs-navbar-brand-color);
   text-decoration: none;
   white-space: nowrap;
-  width: auto;
-  height: auto;
 }
 .navbar-brand:hover, .navbar-brand:focus {
   color: var(--bs-navbar-brand-hover-color);
@@ -4427,6 +4425,12 @@ textarea.form-control-lg {
   --bs-accordion-body-padding-y: 1rem;
   --bs-accordion-active-color: #5a918d;
   --bs-accordion-active-bg: #f0f6f5;
+}
+
+.button-container {
+  position: fixed;
+  top: 20px; /* Adjust this value to set the vertical position */
+  right: 20px; /* Adjust this value to set the horizontal position */
 }
 
 .accordion-button {
